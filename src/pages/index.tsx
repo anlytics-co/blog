@@ -1,12 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import fs from "fs";
 import matter from "gray-matter";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 import SomeImage from "lib/components/samples/SomeImage";
 
-const Home = ({ blogs }) => {
+const Home = ({ blogs }: array<any>) => {
   return (
     <Box
       display={{ md: "flex" }}
