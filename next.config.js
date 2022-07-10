@@ -19,4 +19,9 @@ module.exports = withPWA({
   eslint: {
     dirs: ["src"],
   },
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
 });

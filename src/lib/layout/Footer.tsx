@@ -6,7 +6,7 @@ const Footer = () => {
       <Text>
         {new Date().getFullYear()} -{" "}
         <Link href="https://sznm.dev" isExternal rel="noopener noreferrer">
-          sznm.dev
+          anlytics.co
         </Link>
       </Text>
     </Flex>

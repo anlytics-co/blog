@@ -40,6 +40,12 @@ class MyDocument extends Document {
           />
           <link rel="icon" href="/app-icon.png" /> */}
           <link rel="manifest" href="/manifest.json" />
+
+          {/* Netlify Widget */}
+          <script
+            async
+            src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          />
         </Head>
         <body>
           <ColorModeScript
@@ -47,6 +53,21 @@ class MyDocument extends Document {
           />
           <Main />
           <NextScript />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                  if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                      document.location.href = "/admin/";
+                    });
+                  }
+                });
+              }
+          `,
+            }}
+          />
         </body>
       </Html>
     );

@@ -1,8 +1,8 @@
 {
-  "name": "nextarter-chakra",
+  "name": "anyltics-blog",
   "version": "0.1.0",
   "private": true,
-  "author": "sozonome",
+  "author": "Amir",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,12 +23,14 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "framer-motion": "^6.3.16",
+    "gray-matter": "^4.0.3",
     "next": "12.2.0",
     "next-pwa": "^5.5.4",
     "next-seo": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-markdown": "^6.0.3"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.3",
