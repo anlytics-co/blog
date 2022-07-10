@@ -1,9 +1,9 @@
 import fs from "fs";
-import ReactMarkdown from "react-markdown";
-import matter from "gray-matter";
+import * as matter from "gray-matter";
 import Head from "next/head";
+import ReactMarkdown from "react-markdown";
 
-export default function Blog({ frontmatter, markdown }) {
+export default function Blog({ frontmatter, markdown }: any) {
   return (
     <div>
       <Head>
