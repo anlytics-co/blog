@@ -20,7 +20,7 @@ const Home = ({ blogs }: any) => {
 
       <Box>
         <div>
-          {blogs.map((blog) => (
+          {blogs.map((blog: any) => (
             <li key={blog.slug}>
               <Link href={`${blog.slug}`}>
                 <a>
