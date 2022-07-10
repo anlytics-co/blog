@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import SomeImage from "lib/components/samples/SomeImage";
 
-const Home = ({ blogs }: Array<any>) => {
+const Home = ({ blogs }: any) => {
   return (
     <Box
       display={{ md: "flex" }}
