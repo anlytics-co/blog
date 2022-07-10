@@ -17,7 +17,7 @@ export default function Blog({ frontmatter, markdown }: any) {
   );
 }
 
-export async function getStaticProps({ params: { slug } }: string) {
+export async function getStaticProps({ params: { slug } }: any) {
   const fileContent = matter(
     fs.readFileSync(`./content/blogs/${slug}.md`, "utf8")
   );
