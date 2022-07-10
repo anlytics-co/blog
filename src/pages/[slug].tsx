@@ -1,5 +1,5 @@
 import fs from "fs";
-import * as matter from "gray-matter";
+import matter from "gray-matter";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
