@@ -34,7 +34,7 @@ const Footer = () => {
           <Stack spacing={6}>
             <Box p={0}>
               <Link
-                href={process.env.NEXT_PUBLIC_ANLYTICS_URL}
+                href={`${process.env.NEXT_PUBLIC_ANLYTICS_URL}`}
                 isExternal
                 p={0}
               >
@@ -65,7 +65,7 @@ const Footer = () => {
           </Stack>
           <Stack align="flex-start">
             <ListHeader>Learn</ListHeader>
-            <Link href={process.env.NEXT_PUBLIC_ANLYTICS_DOCS_URL}>
+            <Link href={`${process.env.NEXT_PUBLIC_ANLYTICS_DOCS_URL}`}>
               Documentation
             </Link>
             <Link href="/">Blog</Link>

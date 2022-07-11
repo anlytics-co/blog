@@ -20,7 +20,7 @@ const Header = () => {
       <Box marginLeft="auto">
         <HStack spacing={12}>
           <ThemeToggle />
-          <NextLink href={process.env.NEXT_PUBLIC_ANLYTICS_URL} passHref>
+          <NextLink href={`${process.env.NEXT_PUBLIC_ANLYTICS_URL}`} passHref>
             <Link isExternal>
               <HStack>
                 <Box>Back to Anlytics</Box>
