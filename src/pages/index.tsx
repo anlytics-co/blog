@@ -15,7 +15,7 @@ interface IBlogPost {
   isPublished?: boolean;
 }
 
-const Home = ({ blogs }: Array<IBlogPost>) => {
+const Home = ({ blogs }: any) => {
   return (
     <Box>
       <Center>
