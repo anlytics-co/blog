@@ -12,6 +12,7 @@ interface IBlogPost {
   date: string;
   slug: string;
   body: string;
+  author: string;
   isPublished?: boolean;
 }
 
