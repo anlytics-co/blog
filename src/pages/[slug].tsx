@@ -45,7 +45,7 @@ export default function Blog({ frontmatter, markdown }: any) {
           <title>{frontmatter?.title}</title>
         </Head>
 
-        <ReactMarkdown escapeHtml={false}>{markdown}</ReactMarkdown>
+        <ReactMarkdown>{markdown}</ReactMarkdown>
         <Box mt={8}>
           <Trial />
         </Box>
