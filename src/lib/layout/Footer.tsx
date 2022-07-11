@@ -12,7 +12,7 @@ import {
 
 import Logo from "lib/components/Logo";
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }: { children: any }) => {
   return (
     <Text fontWeight="500" fontSize="lg" mb={2}>
       {children}
