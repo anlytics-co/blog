@@ -1,19 +1,56 @@
+import { Box, Center, VStack, HStack, Text } from "@chakra-ui/react";
 import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
+import Trial from "lib/layout/Trial";
+
+interface IBlogPostHero {
+  title: string;
+  date: string;
+  author: string;
+}
+
+const BlogPostHero = ({ title, date, author }: IBlogPostHero) => {
+  return (
+    <VStack pb={2}>
+      <HStack>
+        <Text as="h1" fontSize="2xl">
+          {title}
+        </Text>
+      </HStack>
+
+      <Box m={4}>
+        <Text as="sub">
+          {date} | {author} | Fix Typo
+        </Text>
+      </Box>
+    </VStack>
+  );
+};
+
 export default function Blog({ frontmatter, markdown }: any) {
   return (
-    <div>
-      <Head>
-        <title>Demo Blog | {frontmatter?.title}</title>
-      </Head>
-      <h1>{frontmatter?.title}</h1>
-      <span>{frontmatter?.date}</span>
-      <hr />
-      <ReactMarkdown>{markdown}</ReactMarkdown>
-    </div>
+    <Box>
+      <Center m={12}>
+        <BlogPostHero
+          title={frontmatter?.title}
+          date={frontmatter?.date}
+          author={frontmatter?.author}
+        />
+      </Center>
+      <Box alignItems="center" gap={8} my={12} w="full">
+        <Head>
+          <title>{frontmatter?.title}</title>
+        </Head>
+
+        <ReactMarkdown escapeHtml={false}>{markdown}</ReactMarkdown>
+        <Box mt={8}>
+          <Trial />
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
